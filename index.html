@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LCV Trufas | Catálogo</title>
+  <meta name="description" content="LCV Trufas artesanais - catálogo, combos e pedidos via WhatsApp." />
+  <link rel="stylesheet" href="style.css?v=7" />
+</head>
+
+<body id="topo">
+  <!-- Header -->
+  <header class="header">
+    <div class="wrap header__inner">
+      <a class="brand" href="#topo" aria-label="LCV Trufas">
+        <img class="brand__logo" src="logo.png" alt="Logo LCV"
+             onerror="this.style.display='none'; document.documentElement.classList.add('no-logo');" />
+        <div class="brand__fallback" aria-hidden="true">LCV</div>
+
+        <div class="brand__text">
+          <strong>LCV Trufas</strong>
+          <span>Doces artesanais • encomendas</span>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#combos">Combos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="chipLink" href="mailto:luene_campos@hotmail.com">luene_campos@hotmail.com</a>
+        <a class="btn btn--ghost" href="#catalogo">Ver produtos</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__left">
+        <p class="badge">🍬 Rosa + azul = vibe docinha</p>
+        <h1>Trufas <span class="accent">LCV</span> pra adoçar seu dia</h1>
+        <p class="subtitle">
+          Escolha sabores, pegue um combo e finalize com o pedido automático no WhatsApp.
+        </p>
+
+        <div class="hero__highlights">
+          <div class="miniCard">
+            <strong>Feitas com carinho</strong>
+            <span>Recheio cremoso e chocolate</span>
+          </div>
+          <div class="miniCard">
+            <strong>Combos prontos</strong>
+            <span>4 / 8 / 12 unidades</span>
+          </div>
+          <div class="miniCard">
+            <strong>Pedido rápido</strong>
+            <span>WhatsApp com resumo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carrinho -->
+      <aside class="card hero__right">
+        <div class="cartHeader">
+          <h2>Seu pedido</h2>
+          <span id="cartPill" class="pill">0 itens • R$ 0,00</span>
+        </div>
+
+        <div class="cartStats">
+          <div class="cartRow">
+            <span>Itens</span>
+            <strong id="cartItems">0</strong>
+          </div>
+          <div class="cartRow">
+            <span>Total</span>
+            <strong id="cartTotal">R$ 0,00</strong>
+          </div>
+        </div>
+
+        <div class="cartListWrap">
+          <h3 class="cartListTitle">Detalhes</h3>
+          <div id="cartList" class="cartList">
+            <p class="muted small">Seu carrinho está vazio.</p>
+          </div>
+        </div>
+
+        <div class="cartActions">
+          <button id="btnLimpar" class="btn btn--ghost" type="button">Limpar</button>
+          <a id="btnWhatsCart" class="btn" href="https://wa.me/5514991342332" target="_blank" rel="noreferrer">
+            Finalizar no WhatsApp
+          </a>
+        </div>
+
+        <p class="muted small">
+          *Sem pagamento online aqui (catálogo). O WhatsApp abre com o pedido montado.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <main class="wrap main">
+    <!-- Catálogo -->
+    <section id="catalogo" class="section">
+      <div class="sectionTitle">
+        <div>
+          <h2>Catálogo de trufas</h2>
+          <p class="muted">Use os botões <strong>− / +</strong> para escolher quantidade.</p>
+        </div>
+
+        <div class="controls">
+          <label class="selectLabel">
+            Ordenar
+            <select id="sort">
+              <option value="padrao">Padrão</option>
+              <option value="menor">Menor preço</option>
+              <option value="maior">Maior preço</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <!-- ✅ Catálogo novo com suas imagens (R$10,00) -->
+      <div id="gridProdutos" class="gridProdutos">
+
+        <article class="card product" data-preco="10.00" data-nome="Trufa Chocolate">
+          <div class="product__media">
+            <img src="Produtos/trufa.chocolate.png" alt="Trufa Chocolate" loading="lazy" />
+            <span class="tag">Clássica</span>
+          </div>
+          <div class="product__body">
+            <h3>Trufa Chocolate</h3>
+            <p class="muted">Chocolate cremoso e marcante.</p>
+            <div class="product__bottom">
+              <strong class="price">R$ 10,00</strong>
+              <div class="qty">
+                <button class="qty__btn" type="button" data-action="minus" data-nome="Trufa Chocolate" data-preco="10.00">−</button>
+                <span class="qty__val" data-qty-for="Trufa Chocolate">0</span>
+                <button class="qty__btn" type="button" data-action="plus" data-nome="Trufa Chocolate" data-preco="10.00">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product" data-preco="10.00" data-nome="Trufa Morango">
+          <div class="product__media">
+            <img src="Produtos/trufa.morango.png" alt="Trufa Morango" loading="lazy" />
+            <span class="tag">Frutada</span>
+          </div>
+          <div class="product__body">
+            <h3>Trufa Morango</h3>
+            <p class="muted">Doce, leve e irresistível.</p>
+            <div class="product__bottom">
+              <strong class="price">R$ 10,00</strong>
+              <div class="qty">
+                <button class="qty__btn" type="button" data-action="minus" data-nome="Trufa Morango" data-preco="10.00">−</button>
+                <span class="qty__val" data-qty-for="Trufa Morango">0</span>
+                <button class="qty__btn" type="button" data-action="plus" data-nome="Trufa Morango" data-preco="10.00">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product" data-preco="10.00" data-nome="Trufa Ninho">
+          <div class="product__media">
+            <img src="Produtos/trufa.ninho.png" alt="Trufa Ninho" loading="lazy" />
+            <span class="tag tag--blue">Suave</span>
+          </div>
+          <div class="product__body">
+            <h3>Trufa Ninho</h3>
+            <p class="muted">Cremosa e delicada.</p>
+            <div class="product__bottom">
+              <strong class="price">R$ 10,00</strong>
+              <div class="qty">
+                <button class="qty__btn" type="button" data-action="minus" data-nome="Trufa Ninho" data-preco="10.00">−</button>
+                <span class="qty__val" data-qty-for="Trufa Ninho">0</span>
+                <button class="qty__btn" type="button" data-action="plus" data-nome="Trufa Ninho" data-preco="10.00">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product" data-preco="10.00" data-nome="Trufa Uva Maracujá">
+          <div class="product__media">
+            <img src="Produtos/trufa.uva.maracuja.png" alt="Trufa Uva Maracujá" loading="lazy" />
+            <span class="tag">Especial</span>
+          </div>
+          <div class="product__body">
+            <h3>Trufa Uva Maracujá</h3>
+            <p class="muted">Combinação diferente e deliciosa.</p>
+            <div class="product__bottom">
+              <strong class="price">R$ 10,00</strong>
+              <div class="qty">
+                <button class="qty__btn" type="button" data-action="minus" data-nome="Trufa Uva Maracujá" data-preco="10.00">−</button>
+                <span class="qty__val" data-qty-for="Trufa Uva Maracujá">0</span>
+                <button class="qty__btn" type="button" data-action="plus" data-nome="Trufa Uva Maracujá" data-preco="10.00">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product" data-preco="10.00" data-nome="Trufa Uva">
+          <div class="product__media">
+            <img src="Produtos/trufa.uva.png" alt="Trufa Uva" loading="lazy" />
+            <span class="tag tag--blue">Refrescante</span>
+          </div>
+          <div class="product__body">
+            <h3>Trufa Uva</h3>
+            <p class="muted">Sabor leve e bem docinho.</p>
+            <div class="product__bottom">
+              <strong class="price">R$ 10,00</strong>
+              <div class="qty">
+                <button class="qty__btn" type="button" data-action="minus" data-nome="Trufa Uva" data-preco="10.00">−</button>
+                <span class="qty__val" data-qty-for="Trufa Uva">0</span>
+                <button class="qty__btn" type="button" data-action="plus" data-nome="Trufa Uva" data-preco="10.00">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Combos -->
+    <section id="combos" class="section">
+      <div class="sectionTitle">
+        <div>
+          <h2>Combos</h2>
+          <p class="muted">Perfeito pra presente e encomendas.</p>
+        </div>
+      </div>
+
+      <div class="gridCombos">
+        <article class="card combo">
+          <div class="combo__top">
+            <div>
+              <h3>Combo 4 trufas</h3>
+              <p class="muted">Escolha sabores depois no WhatsApp.</p>
+            </div>
+            <span class="pill pill--pink">🎁</span>
+          </div>
+          <div class="combo__bottom">
+            <strong class="price">4 unidades</strong>
+            <button class="btnAddCombo" type="button" data-nome="Combo 4 trufas" data-qtd="4">Adicionar</button>
+          </div>
+        </article>
+
+        <article class="card combo">
+          <div class="combo__top">
+            <div>
+              <h3>Combo 8 trufas</h3>
+              <p class="muted">Ótimo custo/benefício.</p>
+            </div>
+            <span class="pill pill--blue">⭐</span>
+          </div>
+          <div class="combo__bottom">
+            <strong class="price">8 unidades</strong>
+            <button class="btnAddCombo" type="button" data-nome="Combo 8 trufas" data-qtd="8">Adicionar</button>
+          </div>
+        </article>
+
+        <article class="card combo">
+          <div class="combo__top">
+            <div>
+              <h3>Combo 12 trufas</h3>
+              <p class="muted">Pra festa, família e eventos.</p>
+            </div>
+            <span class="pill pill--pink">🚀</span>
+          </div>
+          <div class="combo__bottom">
+            <strong class="price">12 unidades</strong>
+            <button class="btnAddCombo" type="button" data-nome="Combo 12 trufas" data-qtd="12">Adicionar</button>
+          </div>
+        </article>
+      </div>
+
+      <p class="muted small tip">
+        Dica: combos não somam valor aqui porque depende dos sabores/combinação. No WhatsApp você confirma.
+      </p>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section">
+      <div class="gridContato">
+        <div class="card">
+          <h2>Contato</h2>
+
+          <div class="contactList">
+            <div class="contactItem">
+              <span>💬 WhatsApp</span>
+              <strong>(14) 99134-2332</strong>
+            </div>
+            <div class="contactItem">
+              <span>📷 Instagram</span>
+              <strong><a class="link" href="https://instagram.com/luenecampos" target="_blank" rel="noreferrer">@luenecampos</a></strong>
+            </div>
+            <div class="contactItem">
+              <span>✉️ E-mail</span>
+              <strong><a class="link" href="mailto:luene_campos@hotmail.com">luene_campos@hotmail.com</a></strong>
+            </div>
+          </div>
+
+          <p class="muted small">
+            O formulário ao lado usa <strong>mailto:</strong> (abre seu app de e-mail com tudo preenchido).
+          </p>
+        </div>
+
+        <form id="formContato" class="card form">
+          <h3>Fale conosco</h3>
+
+          <label>
+            Seu nome
+            <input name="nome" required placeholder="Seu nome" />
+          </label>
+
+          <label>
+            Seu e-mail
+            <input name="email" type="email" required placeholder="seuemail@exemplo.com" />
+          </label>
+
+          <label>
+            Assunto
+            <input name="assunto" required placeholder="Ex: Encomenda / Dúvida / Preços" />
+          </label>
+
+          <label>
+            Mensagem
+            <textarea name="mensagem" required placeholder="Quero encomendar..."></textarea>
+          </label>
+
+          <button class="btn" type="submit">Enviar</button>
+          <p id="resContato" class="muted small"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating buttons -->
+  <div class="float-actions" aria-label="Ações rápidas">
+    <a class="fab fab--ig" href="https://instagram.com/luenecampos" target="_blank" rel="noreferrer" aria-label="Instagram">
+      <span class="fab__tooltip">Instagram</span>
+      <span class="fab__icon" aria-hidden="true">📷</span>
+    </a>
+
+    <a id="btnWhats" class="fab fab--wa" href="https://wa.me/5514991342332" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+      <span id="waTooltip" class="fab__tooltip">Fale conosco</span>
+      <span class="fab__badge" aria-hidden="true">1</span>
+      <span class="fab__icon" aria-hidden="true">💬</span>
+    </a>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <small>© <span id="ano"></span> LCV Trufas</small>
+      <a class="footerLink" href="#topo">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js?v=7"></script>
+</body>
+</html>
